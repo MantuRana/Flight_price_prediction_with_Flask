@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<form class ="container" action="" method="post">
+    <h3 class="h3">✈️✈️ Flight Prices Prediction✈️  {{ username }}</h3>
+    {{ form.hidden_tag() }}
+   <div class="container1">
+    <div class="airline_label">
+        {{ form.airline.label }}<br>
+        {{ form.airline }}
+        {% if form.airline.errors %}
+            {% for error in form.airline.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <div class="journey_label">
+        {{ form.date_of_journey.label }}<br>
+        {{ form.date_of_journey }}
+        {% if form.date_of_journey.errors %}
+            {% for error in form.date_of_journey.errors %}
+                <div class ="error">{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div class="source_label">
+        {{ form.source.label }}<br>
+        {{ form.source }}
+        {% if form.source.errors %}
+            {% for error in form.source.errors %}
+                <div class ="error">{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+<div class="container1">
+    <div class="destination">
+        {{ form.destination.label }}<br>
+        {{ form.destination }}
+        {% if form.destination.errors %}
+            {% for error in form.destination.errors %}
+                <div class="error">{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div class="dep_time">
+        {{ form.dep_time.label }}<br>
+        {{ form.dep_time }}
+        {% if form.dep_time.errors %}
+            {% for error in form.dep_time.errors %}
+                <div class="error">{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <div class="arrival_time">
+        {{ form.arrival_time.label }}<br>
+        {{ form.arrival_time }}
+        {% if form.arrival_time.errors %}
+            {% for error in form.arrival_time.errors %}
+                <div class="error">{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div> 
+<div class="container1">
+    <div class="duration">
+        {{ form.duration.label }}<br>
+        {{ form.duration }}
+        {% if form.duration.errors %}
+            {% for error in form.duration.errors %}
+                <div class="error">{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    
+    <div class="total_stop">
+        {{ form.total_stops.label }}<br>
+        {{ form.total_stops }}
+        {% if form.total_stops.errors %}
+            {% for error in form.total_stops.errors %}
+                <div class="error">{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    
+    <div class="additional">
+        {{ form.additional_info.label }}<br>
+        {{ form.additional_info }}
+        {% if form.additional_info.errors %}
+            {% for error in form.additional_info.errors %}
+                <div class="error">{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>  
+<div class="container1">
+    <div>{{ form.submit() }}</div>
+    <div class="output">
+        {{ output }}
+    </div>
+</div>
+     <button class="btn"><a href="{{ url_for('login') }}">logout</a></button>
+
+</form>
+{% endblock content %}

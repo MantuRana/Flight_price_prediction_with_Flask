@@ -1,0 +1,49 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='signup-style.css') }}">
+    <style>
+        .index-container{
+           margin-left:40%;
+           margin-top:15%;
+        }
+.container{
+    display: flex;
+    justify-container:center;
+    align-items:center;
+}
+        h1{ 
+
+            font-size:40px;
+       }
+
+        span{
+            color: red;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 2px;
+        }
+      
+       button{
+        font-size: 20px;
+        padding: 10px;
+        margin: 20px;
+        max-width:100px;
+
+       }
+    </style>
+</head>
+<body>
+    <div class="index-container">
+        <h1><span>W</span>elcom<span>e</span></h1>
+        <form method="post" class="container">
+            
+            <button type="submit" name="login">Login</button><br><br>
+            <button type="submit" name="signup">SignUp</button>
+        </form>
+    </div>
+</body>
+</html>

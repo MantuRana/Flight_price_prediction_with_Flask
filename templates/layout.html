@@ -1,0 +1,30 @@
+<!-- templates/layout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Predict Page{% endblock title %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='flight1.jpg') }}");
+            animation-name: bg;
+            animation-iteration-count: infinite;
+            animation-duration: 2s;
+        
+        }
+        @keyframes bg{
+    
+            50%{background-image: url("{{ url_for('static', filename='flight1.jpg') }}")}
+            75%{background-image: url("{{ url_for('static', filename='flight1.jpg') }}")}
+            100%{background-image: url("{{ url_for('static', filename='flight1.jpg') }}")}
+            } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}{% endblock content %}
+    </div>
+</body>
+</html>
