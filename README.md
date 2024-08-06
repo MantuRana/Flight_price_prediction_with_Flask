@@ -1,4 +1,5 @@
 # Machine Learning Project
+![image](https://github.com/user-attachments/assets/198637aa-b6c1-455f-8b6e-c1ced6fcc104)
 
 ## Overview
 
