@@ -22,4 +22,4 @@ This repository contains the materials and code for Session 8 of the Flask Cours
 ### API Serving and Deployment
 
 - **Model Serving**: The trained machine learning model was served as an API using Flask.
-- **Deployment**: The final Flask application was deployed using Render, making the web app accessible online.
+-
